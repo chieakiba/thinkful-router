@@ -27,7 +27,7 @@ var CONTACTS = {
 
 var Contact = function(props) {
     return (
-        <div>
+        <div className='contact'>
             <strong>
                <Link to={'/contacts/' + props.id}>
                    {props.name}
@@ -43,13 +43,13 @@ var ContactList = function(props) {
     var contacts = Object.keys(props.contacts).map(function(contactId, index) {
         var contact = props.contacts[contactId];
         return (
-            <li key={index}>
+            <li className='contactList' key={index}>
                 <Contact id={contact.id} name={contact.name} phoneNumber={contact.phoneNumber} />
             </li>
         );
     });
     return (
-        <ul>
+        <ul className='contacts'>
             {contacts}
         </ul>
     );
