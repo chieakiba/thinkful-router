@@ -76,7 +76,7 @@
 	var Contact = function Contact(props) {
 	    return React.createElement(
 	        'div',
-	        { className: 'contact' },
+	        null,
 	        React.createElement(
 	            'strong',
 	            null,
@@ -96,13 +96,13 @@
 	        var contact = props.contacts[contactId];
 	        return React.createElement(
 	            'li',
-	            { className: 'contactList', key: index },
+	            { key: index },
 	            React.createElement(Contact, { id: contact.id, name: contact.name, phoneNumber: contact.phoneNumber })
 	        );
 	    });
 	    return React.createElement(
 	        'ul',
-	        { className: 'contacts' },
+	        null,
 	        contacts
 	    );
 	};
